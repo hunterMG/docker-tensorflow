@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    image: vyg1/tensorflow-py3-jupyterlab
+    ports:
+      - "8888:8888"
+    environment:
+      - PASSWORD=pasiwoder_
+    volumes:
+      - .:/tmp
+    working_dir: /tmp
+    command: jupyter lab --allow-root
